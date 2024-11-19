@@ -6,15 +6,13 @@ public abstract class Alimento {
     double calorias;
     double pesoPorPorcion;
     String unidadMedida;
-    String origen;
 
-    public Alimento(String nombre, String grupo, double calorias, double pesoPorPorcion, String unidadMedida, String origen) {
+    public Alimento(String nombre, String grupo, double calorias, double pesoPorPorcion, String unidadMedida) {
         this.nombre = nombre;
         this.grupo = grupo;
         this.calorias = calorias;
         this.pesoPorPorcion = pesoPorPorcion;
         this.unidadMedida = unidadMedida;
-        this.origen = origen;
     }
 
     public abstract String obtenerInformacionNutricional();
@@ -67,17 +65,9 @@ public abstract class Alimento {
         this.unidadMedida = unidadMedida;
     }
 
-    public String getOrigen() {
-        return origen;
-    }
-
-    public void setOrigen(String origen) {
-        this.origen = origen;
-    }
-
     @Override
     public String toString() {
         return "Nombre: " + nombre + ", Grupo: " + grupo + ", Calorías: " + calorias +
-                ", Peso por porción: " + pesoPorPorcion + " " + unidadMedida + ", Origen: " + origen;
+                ", Peso por porción: " + pesoPorPorcion + " " + unidadMedida;
     }
 }

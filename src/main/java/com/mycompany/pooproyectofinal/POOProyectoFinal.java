@@ -4,6 +4,9 @@
 
 package com.mycompany.pooproyectofinal;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  *
  * @author manyd
@@ -11,6 +14,11 @@ package com.mycompany.pooproyectofinal;
 public class POOProyectoFinal {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        Map<String, String> credentialsMap = new HashMap<>();
+
+        // Add some credentials
+        credentialsMap.put("user1", "password123");
+        credentialsMap.put("user2", "securePass!456");
+
     }
 }

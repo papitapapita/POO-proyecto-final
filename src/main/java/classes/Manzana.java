@@ -1,13 +1,45 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package classes;
 
-/**
- *
- * @author manyd
- */
-public class Manzana {
-    
+import javax.swing.*;
+
+public class Manzana extends FrutasVerduras implements Consumible, Conservable {
+    private String variedad;
+
+    public Manzana(String nombre, double calorias, double pesoPorPorcion, String unidadMedida, String variedad) {
+        super(nombre, calorias, pesoPorPorcion, unidadMedida);
+        this.variedad = variedad;
+    }
+
+    public String getVariedad() {
+        return variedad;
+    }
+
+    public void setVariedad(String variedad) {
+        this.variedad = variedad;
+    }
+
+    @Override
+    public String toString() {
+        return obtenerInformacionNutricional();
+    }
+
+    @Override
+    public void consumir() {
+        JOptionPane.showMessageDialog(null, "Comiendo una manzana de variedad: " + variedad);
+    }
+
+    @Override
+    public void almacenar(String condiciones) {
+        JOptionPane.showMessageDialog(null, "Las manzanas deben almacenarse en condiciones: " + condiciones);
+    }
+
+    @Override
+    public int tiempoDeConservacion() {
+        return 15;
+    }
+
+    @Override
+    public String obtenerInformacionNutricional() {
+        return super.obtenerInformacionNutricional() + ", Variedad: " + variedad;
+    }
 }
