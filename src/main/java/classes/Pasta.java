@@ -3,8 +3,8 @@ package classes;
 public class Pasta extends HidratosDeCarbono implements Consumible, Preparable{
     private String forma;
 
-    public Pasta(String nombre, double calorias, double pesoPorPorcion, String unidadMedida, String forma) {
-        super(nombre, calorias, pesoPorPorcion, unidadMedida);
+    public Pasta(double calorias, double pesoPorPorcion, String unidadMedida, String forma) {
+        super("Pasta", calorias, pesoPorPorcion, unidadMedida);
         this.forma = forma;
     }
 

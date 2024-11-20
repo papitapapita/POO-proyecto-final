@@ -5,8 +5,8 @@ import javax.swing.*;
 public class Tomate extends FrutasVerduras implements Consumible, Conservable, Preparable{
     private String tipo;
 
-    public Tomate(String nombre, double calorias, double pesoPorPorcion, String unidadMedida, String tipo) {
-        super(nombre, calorias, pesoPorPorcion, unidadMedida);
+    public Tomate(double calorias, double pesoPorPorcion, String unidadMedida, String tipo) {
+        super("Tomate", calorias, pesoPorPorcion, unidadMedida);
         this.tipo = tipo;
     }
 

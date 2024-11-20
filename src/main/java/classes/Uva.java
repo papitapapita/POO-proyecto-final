@@ -6,8 +6,8 @@ public class Uva extends FrutasVerduras implements Consumible, Conservable{
     private String tipo;
     private boolean tieneSemillas;
 
-    public Uva(String nombre, double calorias, double pesoPorPorcion, String unidadMedida, String tipo, boolean tieneSemillas) {
-        super(nombre, calorias, pesoPorPorcion, unidadMedida);
+    public Uva(double calorias, double pesoPorPorcion, String unidadMedida, String tipo, boolean tieneSemillas) {
+        super("Uva", calorias, pesoPorPorcion, unidadMedida);
         this.tipo = tipo;
         this.tieneSemillas = tieneSemillas;
     }

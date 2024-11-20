@@ -5,9 +5,8 @@ import javax.swing.*;
 public class Aceite extends Grasas implements Consumible, Conservable{
     private String tipoAceite;
 
-    public Aceite(String nombre, double calorias, double pesoPorPorcion, String unidadMedida,
-                  double contenidoGrasaTotal, String tipoAceite) {
-        super(nombre, calorias, pesoPorPorcion, unidadMedida, contenidoGrasaTotal);
+    public Aceite(double calorias, double pesoPorPorcion, String unidadMedida, String tipoAceite) {
+        super("Aceite", calorias, pesoPorPorcion, unidadMedida);
         this.tipoAceite = tipoAceite;
     }
 
@@ -21,7 +20,9 @@ public class Aceite extends Grasas implements Consumible, Conservable{
 
     @Override
     public void consumir() {
-        JOptionPane.showMessageDialog(null,"Usando aceite de tipo: " + tipoAceite + " para consumo.");
+        JOptionPane.showMessageDialog(null,
+                "Usando aceite de tipo: " + tipoAceite + " para consumo."
+        );
     }
 
     @Override

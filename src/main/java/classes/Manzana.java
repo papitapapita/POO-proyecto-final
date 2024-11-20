@@ -5,8 +5,8 @@ import javax.swing.*;
 public class Manzana extends FrutasVerduras implements Consumible, Conservable {
     private String variedad;
 
-    public Manzana(String nombre, double calorias, double pesoPorPorcion, String unidadMedida, String variedad) {
-        super(nombre, calorias, pesoPorPorcion, unidadMedida);
+    public Manzana(double calorias, double pesoPorPorcion, String unidadMedida, String variedad) {
+        super("Manzana", calorias, pesoPorPorcion, unidadMedida);
         this.variedad = variedad;
     }
 

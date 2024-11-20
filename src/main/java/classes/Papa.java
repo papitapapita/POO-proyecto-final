@@ -5,8 +5,8 @@ import javax.swing.*;
 public class Papa extends HidratosDeCarbono implements Conservable, Consumible, Preparable{
     private String variedad;
 
-    public Papa(String nombre, double calorias, double pesoPorPorcion, String unidadMedida, String variedad) {
-        super(nombre, calorias, pesoPorPorcion, unidadMedida);
+    public Papa(double calorias, double pesoPorPorcion, String unidadMedida, String variedad) {
+        super("Papa", calorias, pesoPorPorcion, unidadMedida);
         this.variedad = variedad;
     }
 

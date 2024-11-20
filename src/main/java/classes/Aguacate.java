@@ -5,8 +5,8 @@ import javax.swing.*;
 public class Aguacate extends FrutasVerduras implements Consumible, Conservable{
     private String variedad;
 
-    public Aguacate(String nombre, double calorias, double pesoPorPorcion, String unidadMedida) {
-        super(nombre, calorias, pesoPorPorcion, unidadMedida);
+    public Aguacate(double calorias, double pesoPorPorcion, String unidadMedida, String variedad) {
+        super("Aguacate", calorias, pesoPorPorcion, unidadMedida);
         this.variedad = variedad;
     }
 

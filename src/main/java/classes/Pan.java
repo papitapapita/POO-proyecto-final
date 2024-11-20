@@ -4,9 +4,8 @@ public class Pan extends HidratosDeCarbono implements Consumible, Conservable, P
     private String tipoHarina;
     private boolean esIntegral;
 
-    public Pan(String nombre, double calorias, double pesoPorPorcion, String unidadMedida, String tipoHarina,
-               boolean esIntegral) {
-        super(nombre, calorias, pesoPorPorcion, unidadMedida);
+    public Pan(double calorias, double pesoPorPorcion, String unidadMedida, String tipoHarina, boolean esIntegral) {
+        super("pan", calorias, pesoPorPorcion, unidadMedida);
         this.tipoHarina = tipoHarina;
         this.esIntegral = esIntegral;
     }

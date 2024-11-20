@@ -4,9 +4,8 @@ public class Queso extends Grasas implements Consumible, Conservable, Preparable
     private String tipo;
     private boolean estaMaduro;
 
-    public Queso(String nombre, double calorias, double pesoPorPorcion, String unidadMedida,
-                 double contenidoGrasaTotal, String tipo, boolean estaMaduro) {
-        super(nombre, calorias, pesoPorPorcion, unidadMedida, contenidoGrasaTotal);
+    public Queso(double calorias, double pesoPorPorcion, String unidadMedida, String tipo, boolean estaMaduro) {
+        super("Queso", calorias, pesoPorPorcion, unidadMedida);
         this.tipo = tipo;
         this.estaMaduro = estaMaduro;
     }
@@ -23,7 +22,7 @@ public class Queso extends Grasas implements Consumible, Conservable, Preparable
 
     @Override
     public int tiempoDeConservacion() {
-        return 15; // Shelf life in days
+        return 15;
     }
 
     @Override

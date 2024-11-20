@@ -2,13 +2,10 @@ package classes;
 
 public class Pescado extends Grasas implements Consumible, Conservable, Preparable{
     private String especie;
-    private boolean esDeAguaSalada;
 
-    public Pescado(String nombre, double calorias, double pesoPorPorcion, String unidadMedida,
-                   double contenidoGrasaTotal, String especie, boolean esDeAguaSalada) {
-        super(nombre, calorias, pesoPorPorcion, unidadMedida, contenidoGrasaTotal);
+    public Pescado(double calorias, double pesoPorPorcion, String unidadMedida, String especie) {
+        super("Pescado", calorias, pesoPorPorcion, unidadMedida);
         this.especie = especie;
-        this.esDeAguaSalada = esDeAguaSalada;
     }
 
     public String getEspecie() {
@@ -19,17 +16,9 @@ public class Pescado extends Grasas implements Consumible, Conservable, Preparab
         this.especie = especie;
     }
 
-    public boolean getEsDeAguaSalada() {
-        return esDeAguaSalada;
-    }
-
-    public void setEsDeAguaSalada(boolean esDeAguaSalada) {
-        this.esDeAguaSalada = esDeAguaSalada;
-    }
-
     @Override
     public void consumir() {
-        System.out.println("Comiendo pescado de especie: " + especie + (esDeAguaSalada ? " de agua salada." : " de agua dulce."));
+        System.out.println("Comiendo pescado de especie: " + especie);
     }
 
     @Override
@@ -49,7 +38,7 @@ public class Pescado extends Grasas implements Consumible, Conservable, Preparab
 
     @Override
     public String obtenerInformacionNutricional() {
-        return super.obtenerInformacionNutricional() + ", Especie: " + especie + ", Es de Agua Salada: " + esDeAguaSalada;
+        return super.obtenerInformacionNutricional() + ", Especie: " + especie;
     }
 
     @Override

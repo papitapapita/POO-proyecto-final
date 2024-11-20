@@ -3,9 +3,8 @@ package classes;
 public class Chocolate extends Grasas implements Consumible, Preparable{
     private double porcentajeCacao;
 
-    public Chocolate(String nombre, double calorias, double pesoPorPorcion, String unidadMedida,
-                     double contenidoGrasaTotal, double porcentajeCacao) {
-        super(nombre, calorias, pesoPorPorcion, unidadMedida, contenidoGrasaTotal);
+    public Chocolate(double calorias, double pesoPorPorcion, String unidadMedida, double porcentajeCacao) {
+        super("Chocolate", calorias, pesoPorPorcion, unidadMedida);
         this.porcentajeCacao = porcentajeCacao;
     }
 
